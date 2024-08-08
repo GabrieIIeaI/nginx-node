@@ -13,5 +13,4 @@ RUN apt-get update \
 
 EXPOSE 9000
 
-ENTRYPOINT [ "dockerize",  "-wait",  "tcp://db:3306", "-timeout", "20s"  ]
-CMD [ "node", "index.js" ]
+ENTRYPOINT ["./entrypoint.sh"]
